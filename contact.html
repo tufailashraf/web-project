@@ -207,7 +207,8 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <h5>Phone Number</h5>
-                        <p><strong>Main:</strong> +1 (555) 123-4567<br><strong>Support:</strong> +1 (555) 987-6543<br><strong>Mon-Fri</strong> 9AM-6PM</p>
+                        <p><strong>Main:</strong> +1 (555) 123-4567<br><strong>Support:</strong> +1 (555)
+                            987-6543<br><strong>Mon-Fri</strong> 9AM-6PM</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -216,7 +217,80 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h5>Email Address</h5>
-                        <p><strong>General:</strong> info@eduhub.com<br><strong>Support:</strong> support@eduhub.com<br><strong>Feedback:</strong> feedback@eduhub.com</p>
+                        <p><strong>General:</strong> info@eduhub.com<br><strong>Support:</strong>
+                            support@eduhub.com<br><strong>Feedback:</strong> feedback@eduhub.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container-fluid px-4">
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; text-align: center;">Send us a Message
+            </h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 3rem;">We'll get back to you shortly
+            </p>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                                    required>
+                                <small class="form-text">We'll use this to personalize our response</small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Enter your email address" required>
+                                <small class="form-text">We'll never share your email</small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="partnership">Partnership</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message..."
+                                    required></textarea>
+                                <small class="form-text">Please provide as much detail as possible</small>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="agree" required>
+                                <label class="form-check-label" for="agree">
+                                    I agree to the terms and conditions
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+
+                        <div id="successMessage"
+                            style="display: none; margin-top: 1.5rem; padding: 1rem; background: #d4edda; border-radius: 10px; color: #155724; border: 1px solid #c3e6cb;">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you
+                            soon.
+                        </div>
                     </div>
                 </div>
             </div>
