@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - EduHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .page-header h1 {
+            font-weight: 800;
+        }
+
+        .quiz-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary-gradient);
+            height: 100%;
+            transition: all 0.3s;
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .quiz-header {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-box {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .difficulty-bar {
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            height: 6px;
+            border-radius: 10px;
+        }
+
+        .quiz-info {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 1rem 0;
+        }
+
+        .start-quiz-btn {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 20px;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .start-quiz-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .leaderboard-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .leaderboard-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .leaderboard-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .leaderboard-table table {
+            margin: 0;
+        }
+
+        .leaderboard-table thead {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .leaderboard-table th {
+            font-weight: 800;
+            padding: 1.2rem;
+            border: none;
+        }
+
+        .leaderboard-table td {
+            padding: 1.2rem;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        .leaderboard-table tbody tr:hover {
+            background: var(--bg-light);
+        }
+
+        .rank-badge {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="quiz.html">Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid px-4">
+            <div class="row mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>EduHub</h5>
+                    <p>Your comprehensive learning platform for academic excellence</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="topics.html">Topics</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Subjects</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Mathematics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Physics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-envelope me-2"></i>info@eduhub.com</p>
+                    <p><i class="fas fa-phone me-2"></i>+92 3478228882</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>EduHub Near SATA Tech, Gilgit</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 EduHub. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-inline me-3"><a href="#">Privacy Policy</a></li>
+                        <li class="d-inline me-3"><a href="#">Terms & Conditions</a></li>
+                        <li class="d-inline"><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
