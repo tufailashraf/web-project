@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topics & Chapters - EduHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .page-header h1 {
+            font-weight: 800;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            border: 2px solid var(--text-light);
+            background: white;
+            color: var(--text-dark);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: var(--primary-gradient);
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            transition: all 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .difficulty-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .beginner {
+            background: #ffeaa7;
+            color: #d63031;
+        }
+
+        .intermediate {
+            background: #74b9ff;
+            color: #0984e3;
+        }
+
+        .advanced {
+            background: #fd79a8;
+            color: #e84393;
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .topic-title {
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .topic-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .topic-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+        }
+
+        .start-btn {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .start-btn:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="topics.html">Topics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid px-4">
+            <div class="row mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>EduHub</h5>
+                    <p>Your comprehensive learning platform for academic excellence</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="topics.html">Topics</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Subjects</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Mathematics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Physics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-envelope me-2"></i>info@eduhub.com</p>
+                    <p><i class="fas fa-phone me-2"></i>+92 3478228882</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>EduHub Near SATA Tech, Gilgit</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 EduHub. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-inline me-3"><a href="#">Privacy Policy</a></li>
+                        <li class="d-inline me-3"><a href="#">Terms & Conditions</a></li>
+                        <li class="d-inline"><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function filterTopics(subject) {
+            const items = document.querySelectorAll('.topic-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter items
+            items.forEach(item => {
+                if (subject === 'all' || item.dataset.subject === subject) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
