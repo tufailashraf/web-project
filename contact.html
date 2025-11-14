@@ -198,7 +198,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h5>Our Location</h5>
-                        <p>123 Education Street<br>Learning City, LC 12345<br>United States</p>
+                        <p>EduHub<br>Near SATA Tech<br>Gilgit</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -207,8 +207,8 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <h5>Phone Number</h5>
-                        <p><strong>Main:</strong> +1 (555) 123-4567<br><strong>Support:</strong> +1 (555)
-                            987-6543<br><strong>Mon-Fri</strong> 9AM-6PM</p>
+                        <p><strong>Main:</strong> +92 3462225440<br><strong>Support:</strong> +92
+                            3478228882<br><strong>Mon-Fri</strong> 9AM-6PM</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -437,6 +437,23 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+
+        function toggleFaq(element) {
+            const body = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            body.classList.toggle('show');
+            icon.classList.toggle('show');
+        }
+    </script>
 </body>
 
 </html>
