@@ -1,4 +1,4 @@
-# 🎓 EDU-HUB — Interactive Educational Website for Students
+# 🎓 EduHub — Educational Website for Students
 
 EDU-HUB is a modern, responsive and student-focused **educational learning platform** designed to provide easy access to organized study material, subject topics, notes, quizzes and resources — all within a visually engaging and distraction-free interface.
 
