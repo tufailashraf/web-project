@@ -1,0 +1,82 @@
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  border: 2px solid var(--text-light);
+  color: var(--text-dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  background: var(--primary-gradient);
+  color: white;
+  border-color: var(--primary-gradient);
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.topic-card {
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.topic-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.difficulty-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.beginner {
+  background: #ffeaa7;
+  color: #d63031;
+}
+
+.intermediate {
+  background: #74b9ff;
+  color: #0984e3;
+}
+
+.advanced {
+  background: #fd79a8;
+  color: #e84393;
+}
+
+.topic-title {
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
+}
+
+.topic-desc {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.topic-meta {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+}
+
+.start-btn {
+  background: var(--primary-gradient);
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  transform: scale(1.02);
+}

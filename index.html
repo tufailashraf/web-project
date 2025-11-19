@@ -7,226 +7,10 @@
     <title>EduHub - Learn Different Subjects</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Hero Section */
-        .hero {
-            background: var(--primary-gradient);
-            padding: 120px 0;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: float 15s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary-custom {
-            background: white;
-            color: #667eea;
-            padding: 12px 32px;
-            border-radius: 50px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-primary-custom:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-secondary-custom {
-            background: transparent;
-            color: white;
-            padding: 12px 32px;
-            border-radius: 50px;
-            font-weight: 700;
-            border: 2px solid white;
-            cursor: pointer;
-        }
-
-        .btn-secondary-custom:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-3px);
-        }
-
-        /* Subjects Section */
-        .subjects-section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 4rem;
-        }
-
-        .subject-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            height: 100%;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .subject-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .subject-card h5 {
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .subject-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .subject-features {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 1.5rem;
-        }
-
-        .subject-features li {
-            padding: 0.5rem 0;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-        }
-
-        .subject-features li i {
-            color: var(--accent-color);
-            margin-right: 0.5rem;
-            font-weight: bold;
-        }
-
-        /* Features Section */
-        .features-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 100px 0;
-        }
-
-        .feature-box {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            height: 100%;
-        }
-
-        .feature-box:hover {
-            transform: translateY(-8px);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .feature-box h6 {
-            font-weight: 800;
-            margin-bottom: 0.8rem;
-            color: var(--text-dark);
-        }
-
-        .feature-box p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* Statistics Section */
-        .stats-section {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 80px 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-    </style>
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/pages/index.css">
+    <link rel="stylesheet" href="css/pages/style.css">
 </head>
 
 <body>
@@ -246,16 +30,16 @@
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="topics.html">Topics</a>
+                        <a class="nav-link" href="pages/topics.html">Topics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="resources.html">Resources</a>
+                        <a class="nav-link" href="pages/resources.html">Resources</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="quiz.html">Quiz</a>
+                        <a class="nav-link" href="pages/quiz.html">Quiz</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="pages/contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -269,14 +53,14 @@
                 <div class="col-lg-7 hero-content position-relative z-2">
                     <h1 class="mb-4">Learn Smarter, Achieve Better</h1>
                     <p>Master 6 subjects with our comprehensive learning platform designed for school students</p>
-                    <div class="cta-buttons">
-                        <a href="topics.html" class="btn-primary-custom text-decoration-none">Explore Now</a>
-                        <a href="resources.html" class="btn-secondary-custom text-decoration-none">Browse Resources</a>
+                    <div class="cta-buttons d-flex gap-3 flex-wrap fw-bold">
+                        <a href="pages/topics.html" class="btn-primary-custom bg-white border-0 text-decoration-none">Explore Now</a>
+                        <a href="pages/resources.html" class="btn-secondary-custom text-white bg-transparent text-decoration-none">Browse Resources</a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center">
                     <i class="fas fa-book-reader"
-                        style="font-size: 10rem; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: white; opacity: 1;"></i>
+                        style="font-size: 10rem; background: var(--primary-gradient); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: white; opacity: 1;"></i>
                 </div>
             </div>
         </div>
@@ -285,114 +69,114 @@
     <!-- Subjects Section -->
     <section class="subjects-section">
         <div class="container-fluid px-4">
-            <h2 class="section-title">Our Subjects</h2>
-            <p class="section-subtitle">Choose from carefully curated courses in 6 different subjects</p>
+            <h2 class="section-title mb-3 text-center">Our Subjects</h2>
+            <p class="section-subtitle text-center">Choose from carefully curated courses in 6 different subjects</p>
             <div class="row g-4">
                 <!-- English -->
                 <div class="col-lg-4 col-md-6">
                     <div class="subject-card">
-                        <div class="subject-icon" style="color: #667eea;">
+                        <div class="subject-icon mb-3 d-flex justify-content-center align-items-center" style="color: #667eea;">
                             <i class="fas fa-book"></i>
                         </div>
                         <h5>English</h5>
                         <p>Master grammar, literature, comprehension and writing skills</p>
-                        <ul class="subject-features">
-                            <li><i class="fas fa-check"></i>Grammar Fundamentals</li>
-                            <li><i class="fas fa-check"></i>Literature Analysis</li>
-                            <li><i class="fas fa-check"></i>Writing Excellence</li>
-                            <li><i class="fas fa-check"></i>Vocabulary Building</li>
+                        <ul class="subject-features p-0 list-unstyled mb-4">
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Grammar Fundamentals</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Literature Analysis</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Writing Excellence</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Vocabulary Building</li>
                         </ul>
-                        <a href="topics.html" class="btn btn-primary btn-sm rounded-pill">Start Learning</a>
+                        <a href="pages/topics.html" class="btn btn-primary btn-sm rounded-pill">Start Learning</a>
                     </div>
                 </div>
 
                 <!-- Mathematics -->
                 <div class="col-lg-4 col-md-6">
                     <div class="subject-card">
-                        <div class="subject-icon" style="color: #4ecdc4;">
+                        <div class="subject-icon mb-3 d-flex justify-content-center align-items-center" style="color: #4ecdc4;">
                             <i class="fas fa-calculator"></i>
                         </div>
                         <h5>Mathematics</h5>
                         <p>Learn algebra, geometry, trigonometry and calculus with ease</p>
-                        <ul class="subject-features">
-                            <li><i class="fas fa-check"></i>Algebra & Geometry</li>
-                            <li><i class="fas fa-check"></i>Trigonometry</li>
-                            <li><i class="fas fa-check"></i>Calculus Basics</li>
-                            <li><i class="fas fa-check"></i>Problem Solving</li>
+                        <ul class="subject-features p-0 list-unstyled mb-4">
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Algebra & Geometry</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Trigonometry</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Calculus Basics</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Problem Solving</li>
                         </ul>
-                        <a href="topics.html" class="btn btn-success btn-sm rounded-pill">Start Learning</a>
+                        <a href="pages/topics.html" class="btn btn-success btn-sm rounded-pill">Start Learning</a>
                     </div>
                 </div>
 
                 <!-- Chemistry -->
                 <div class="col-lg-4 col-md-6">
                     <div class="subject-card">
-                        <div class="subject-icon" style="color: #ff6b6b;">
+                        <div class="subject-icon mb-3 d-flex justify-content-center align-items-center" style="color: #ff6b6b;">
                             <i class="fas fa-flask"></i>
                         </div>
                         <h5>Chemistry</h5>
                         <p>Understand atomic structure, complete reactions and periodic table</p>
-                        <ul class="subject-features">
-                            <li><i class="fas fa-check"></i>Atomic Structure</li>
-                            <li><i class="fas fa-check"></i>Chemical Reactions</li>
-                            <li><i class="fas fa-check"></i>Periodic Table</li>
-                            <li><i class="fas fa-check"></i>Lab Techniques</li>
+                        <ul class="subject-features p-0 list-unstyled mb-4">
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Atomic Structure</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Chemical Reactions</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Periodic Table</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Lab Techniques</li>
                         </ul>
-                        <a href="topics.html" class="btn btn-danger btn-sm rounded-pill">Start Learning</a>
+                        <a href="pages/topics.html" class="btn btn-danger btn-sm rounded-pill">Start Learning</a>
                     </div>
                 </div>
 
                 <!-- Physics -->
                 <div class="col-lg-4 col-md-6">
                     <div class="subject-card">
-                        <div class="subject-icon" style="color: #ffa502;">
+                        <div class="subject-icon mb-3 d-flex justify-content-center align-items-center" style="color: #ffa502;">
                             <i class="fas fa-atom"></i>
                         </div>
                         <h5>Physics</h5>
                         <p>Explore mechanics, thermodynamics and electromagnetism</p>
-                        <ul class="subject-features">
-                            <li><i class="fas fa-check"></i>Mechanics & Motion</li>
-                            <li><i class="fas fa-check"></i>Thermodynamics</li>
-                            <li><i class="fas fa-check"></i>Electromagnetism</li>
-                            <li><i class="fas fa-check"></i>Optics & Waves</li>
+                        <ul class="subject-features p-0 list-unstyled mb-4">
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Mechanics & Motion</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Thermodynamics</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Electromagnetism</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Optics & Waves</li>
                         </ul>
-                        <a href="topics.html" class="btn btn-warning btn-sm rounded-pill">Start Learning</a>
+                        <a href="pages/topics.html" class="btn btn-warning btn-sm rounded-pill">Start Learning</a>
                     </div>
                 </div>
 
                 <!-- Computer Science -->
                 <div class="col-lg-4 col-md-6">
                     <div class="subject-card">
-                        <div class="subject-icon" style="color: #764ba2;">
+                        <div class="subject-icon mb-3 d-flex justify-content-center align-items-center" style="color: #764ba2;">
                             <i class="fas fa-laptop-code"></i>
                         </div>
                         <h5>Computer Science</h5>
                         <p>Learn programming, algorithms, data structures and web dev</p>
-                        <ul class="subject-features">
-                            <li><i class="fas fa-check"></i>Programming Basics</li>
-                            <li><i class="fas fa-check"></i>Data Structures</li>
-                            <li><i class="fas fa-check"></i>Web Development</li>
-                            <li><i class="fas fa-check"></i>Cybersecurity Intro</li>
+                        <ul class="subject-features p-0 list-unstyled mb-4">
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Programming Basics</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Data Structures</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Web Development</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Cybersecurity Intro</li>
                         </ul>
-                        <a href="topics.html" class="btn btn-primary btn-sm rounded-pill">Start Learning</a>
+                        <a href="pages/topics.html" class="btn btn-primary btn-sm rounded-pill">Start Learning</a>
                     </div>
                 </div>
 
                 <!-- Biology -->
                 <div class="col-lg-4 col-md-6">
                     <div class="subject-card">
-                        <div class="subject-icon" style="color: #00c896;">
+                        <div class="subject-icon mb-3 d-flex justify-content-center align-items-center" style="color: #00c896;">
                             <i class="fas fa-dna"></i>
                         </div>
                         <h5>Biology</h5>
                         <p>Study cell biology, genetics, anatomy, zoology and ecology</p>
-                        <ul class="subject-features">
-                            <li><i class="fas fa-check"></i>Cell Biology</li>
-                            <li><i class="fas fa-check"></i>Genetics & Evolution</li>
-                            <li><i class="fas fa-check"></i>Human Anatomy</li>
-                            <li><i class="fas fa-check"></i>Ecology Systems</li>
+                        <ul class="subject-features p-0 list-unstyled mb-4">
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Cell Biology</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Genetics & Evolution</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Human Anatomy</li>
+                            <li><i class="me-2 fw-bold fas fa-check"></i>Ecology Systems</li>
                         </ul>
-                        <a href="topics.html" class="btn btn-success btn-sm rounded-pill">Start Learning</a>
+                        <a href="pages/topics.html" class="btn btn-success btn-sm rounded-pill">Start Learning</a>
                     </div>
                 </div>
             </div>
@@ -402,47 +186,47 @@
     <!-- Features Section -->
     <section class="features-section">
         <div class="container-fluid px-4">
-            <h2 class="section-title">Why Choose EduHub?</h2>
-            <p class="section-subtitle">Experience the best learning platform with these amazing features</p>
+            <h2 class="section-title mb-3 text-center">Why Choose EduHub?</h2>
+            <p class="section-subtitle text-center">Experience the best learning platform with these amazing features</p>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fas fa-book-reader"></i></div>
+                    <div class="feature-box bg-white text-center h-100">
+                        <div class="feature-icon mb-3"><i class="fas fa-book-reader"></i></div>
                         <h6>Structured Learning</h6>
                         <p>Topics organized by difficulty level from basics to advanced</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="feature-box bg-white text-center h-100">
+                        <div class="feature-icon mb-3"><i class="fas fa-file-alt"></i></div>
                         <h6>Rich Resources</h6>
                         <p>Notes, PDFs, videos, and materials for deeper learning</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="feature-box bg-white text-center h-100">
+                        <div class="feature-icon mb-3"><i class="fa-solid fa-clipboard-list"></i></div>
                         <h6>Interactive Quizzes</h6>
                         <p>Test knowledge and get instant feedback on performance</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="feature-box bg-white text-center h-100">
+                        <div class="feature-icon mb-3"><i class="fas fa-mobile-alt"></i></div>
                         <h6>Mobile Friendly</h6>
                         <p>Learn anytime, anywhere with responsive design</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="feature-box bg-white text-center h-100">
+                        <div class="feature-icon mb-3"><i class="fas fa-chart-line"></i></div>
                         <h6>Track Progress</h6>
                         <p>Monitor your learning journey and see improvements</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <div class="feature-box bg-white text-center h-100">
+                        <div class="feature-icon mb-3"><i class="fas fa-headset"></i></div>
                         <h6>Expert Support</h6>
                         <p>Get help from our support team whenever needed</p>
                     </div>
@@ -452,30 +236,30 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="stats-section">
+    <section class="stats-section text-white">
         <div class="container-fluid px-4">
             <div class="row text-center">
                 <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <div class="stat-number">50K+</div>
+                    <div class="stat-item text-center">
+                        <div class="stat-number mb-2">50K+</div>
                         <div class="stat-label">Active Students</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
+                    <div class="stat-item text-center">
+                        <div class="stat-number mb-2">500+</div>
                         <div class="stat-label">Topics Covered</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <div class="stat-number">1000+</div>
+                    <div class="stat-item text-center">
+                        <div class="stat-number mb-2">1000+</div>
                         <div class="stat-label">Learning Resources</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <div class="stat-number">95%</div>
+                    <div class="stat-item text-center">
+                        <div class="stat-number mb-2">95%</div>
                         <div class="stat-label">Satisfaction Rate</div>
                     </div>
                 </div>
@@ -491,19 +275,19 @@
                     <h5><i class="fas fa-graduation-cap me-2"></i>EduHub</h5>
                     <p>Your comprehensive learning platform for academic excellence</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="topics.html">Topics</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="pages/topics.html">Topics</a></li>
+                        <li><a href="pages/resources.html">Resources</a></li>
+                        <li><a href="pages/quiz.html">Quiz</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">

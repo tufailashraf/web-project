@@ -1,0 +1,60 @@
+.resource-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.resource-card {
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.resource-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.resource-icon {
+  font-size: 2.5rem;
+}
+
+.resource-meta span {
+  background: var(--bg-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.btn-download {
+  background: var(--primary-gradient);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-download:hover {
+  transform: scale(1.02);
+}
+
+.video-placeholder {
+  border-radius: 12px;
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}

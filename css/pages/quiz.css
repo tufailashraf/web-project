@@ -1,0 +1,99 @@
+.quiz-card {
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--primary-gradient);
+  transition: all 0.3s;
+}
+
+.quiz-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.quiz-header {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.quiz-stats {
+  grid-template-columns: 1fr 1fr;
+}
+
+.stat-box {
+  background: var(--bg-light);
+  border-radius: 10px;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.progress-bar {
+  height: 6px;
+  border-radius: 10px;
+}
+
+.quiz-info {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.start-quiz-btn {
+  background: var(--primary-gradient);
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.start-quiz-btn:hover {
+  transform: scale(1.02);
+}
+
+.leaderboard-section {
+  padding: 80px 0;
+}
+
+.leaderboard-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-table {
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.leaderboard-table thead {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.leaderboard-table th {
+  font-weight: 800;
+  padding: 1.2rem;
+  border: none;
+}
+
+.leaderboard-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.leaderboard-table tbody tr:hover {
+  background: var(--bg-light);
+}
+
+.rank-badge {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}

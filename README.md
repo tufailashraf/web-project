@@ -139,13 +139,55 @@ git push
 
 ## 👥 Contributors / Developers
 
-| Name | GitHub ID | Role |
-|------|-----------|-----|
-| **Tufail Ashraf** | @tufailashraf | Developer |
-| **Anjum Ali** | @anjumalikhan | Developer |
-| **Ikhlaq Ahmed** | @mongolcoder2123 | Developer |
-| **Mohsin Raza** | @mohhsinrazajr1234-dev | Developer |
-| **Ali Abbas** | @Aliabbas1-ux | Developer |
+<table>
+  <tr style="text-align: center;">
+    <td>
+      <a href="https://github.com/tufailashraf">
+        <img src="https://github.com/tufailashraf.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Tufail Ashraf</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/tufailashraf" title="Code">💻</a>
+    </td>
+    <td>
+      <a href="https://github.com/anjumalikhan">
+        <img src="https://github.com/anjumalikhan.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Anjum Ali</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/anjumalikhan" title="Code">💻</a>
+    </td>
+    <td>
+      <a href="https://github.com/mongolcoder2123">
+        <img src="https://github.com/mongolcoder2123.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Ikhlaq Ahmed</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/mongolcoder2123" title="Code">💻</a>
+    </td>
+    <td>
+      <a href="https://github.com/mohhsinrazajr1234-dev">
+        <img src="https://github.com/mohhsinrazajr1234-dev.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Mohsin Raza</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/mohhsinrazajr1234-dev" title="Code">💻</a>
+    </td>
+    <td>
+      <a href="https://github.com/Aliabbas1-ux">
+        <img src="https://github.com/Aliabbas1-ux.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Ali Abbas</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/Aliabbas1-ux" title="Code">💻</a>
+    </td>
+  </tr>
+</table>
 
 All five worked as **full contributors and developers** toward building the platform.
 

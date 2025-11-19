@@ -7,126 +7,11 @@
     <title>Topics & Chapters - EduHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .page-header {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 60px 0;
-        }
-
-        .page-header h1 {
-            font-weight: 800;
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-
-        .filter-btn {
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
-            border: 2px solid var(--text-light);
-            background: white;
-            color: var(--text-dark);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .filter-btn.active {
-            background: var(--primary-gradient);
-            color: white;
-            border-color: var(--primary-gradient);
-        }
-
-        .filter-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .topic-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            height: 100%;
-            transition: all 0.3s;
-        }
-
-        .topic-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .difficulty-badge {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        .beginner {
-            background: #ffeaa7;
-            color: #d63031;
-        }
-
-        .intermediate {
-            background: #74b9ff;
-            color: #0984e3;
-        }
-
-        .advanced {
-            background: #fd79a8;
-            color: #e84393;
-        }
-
-        .topic-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-        }
-
-        .topic-title {
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-bottom: 0.8rem;
-        }
-
-        .topic-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
-            line-height: 1.5;
-        }
-
-        .topic-meta {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 1.2rem;
-        }
-
-        .start-btn {
-            background: var(--primary-gradient);
-            color: white;
-            border: none;
-            padding: 0.6rem 1.5rem;
-            border-radius: 20px;
-            font-weight: 700;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .start-btn:hover {
-            transform: scale(1.02);
-        }
-    </style>
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/page-header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/pages/topics.css">
+    <link rel="stylesheet" href="../css/pages/style.css">
 </head>
 
 <body>
@@ -134,13 +19,13 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid px-4">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="topics.html">Topics</a></li>
                     <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
@@ -151,7 +36,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header text-center">
         <div class="container-fluid px-4">
             <h1>Topics & Chapters</h1>
             <p class="mb-0">Master your subjects with our comprehensive topic collection</p>
@@ -162,402 +47,402 @@
     <section style="padding: 80px 0;">
         <div class="container-fluid px-4">
             <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" onclick="filterTopics('all')">All Subjects</button>
-                <button class="filter-btn" onclick="filterTopics('english')">English</button>
-                <button class="filter-btn" onclick="filterTopics('math')">Mathematics</button>
-                <button class="filter-btn" onclick="filterTopics('chemistry')">Chemistry</button>
-                <button class="filter-btn" onclick="filterTopics('physics')">Physics</button>
-                <button class="filter-btn" onclick="filterTopics('cs')">Computer Science</button>
-                <button class="filter-btn" onclick="filterTopics('biology')">Biology</button>
+            <div class="filter-buttons d-flex gap-2 flex-wrap mb-5">
+                <button class="filter-btn bg-white active" onclick="filterTopics('all')">All Subjects</button>
+                <button class="filter-btn bg-white" onclick="filterTopics('english')">English</button>
+                <button class="filter-btn bg-white" onclick="filterTopics('math')">Mathematics</button>
+                <button class="filter-btn bg-white" onclick="filterTopics('chemistry')">Chemistry</button>
+                <button class="filter-btn bg-white" onclick="filterTopics('physics')">Physics</button>
+                <button class="filter-btn bg-white" onclick="filterTopics('cs')">Computer Science</button>
+                <button class="filter-btn bg-white" onclick="filterTopics('biology')">Biology</button>
             </div>
 
             <!-- Topics Grid -->
             <div class="row g-4">
                 <!-- English Topic 1 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="english">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Grammar Fundamentals</h5>
-                            <span class="difficulty-badge beginner">Beginner</span>
+                            <span class="difficulty-badge d-inline-block fw-bold beginner">Beginner</span>
                         </div>
                         <p class="topic-desc">Learn the basics of English grammar including parts of speech and sentence
                             structure</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>8 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>4 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- English Topic 2 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="english">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Literature & Analysis</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Analyze literary works and understand different writing styles and
                             techniques</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>12 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- English Topic 3 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="english">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Writing Skills</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Master essay writing, creative writing, and business communication</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>10 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- English Topic 4 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="english">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Advanced Vocabulary</h5>
-                            <span class="difficulty-badge advanced">Advanced</span>
+                            <span class="difficulty-badge d-inline-block fw-bold advanced">Advanced</span>
                         </div>
                         <p class="topic-desc">Expand vocabulary and understand idioms, phrasal verbs, and nuanced
                             meanings</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>15 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>7 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Mathematics Topic 1 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="math">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Number Systems</h5>
-                            <span class="difficulty-badge beginner">Beginner</span>
+                            <span class="difficulty-badge d-inline-block fw-bold beginner">Beginner</span>
                         </div>
                         <p class="topic-desc">Understand integers, fractions, decimals, and basic arithmetic operations</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>10 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Mathematics Topic 2 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="math">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Algebra Essentials</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Learn equations, inequalities, polynomials, and algebraic expressions</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>14 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>7 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Mathematics Topic 3 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="math">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Geometry & Trigonometry</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Master shapes, angles, trigonometric functions, and their applications</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>12 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Mathematics Topic 4 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="math">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Calculus Fundamentals</h5>
-                            <span class="difficulty-badge advanced">Advanced</span>
+                            <span class="difficulty-badge d-inline-block fw-bold advanced">Advanced</span>
                         </div>
                         <p class="topic-desc">Explore limits, derivatives, integrals, and applications of calculus</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>16 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>8 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Chemistry Topic 1 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="chemistry">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Atomic Structure & Bonding</h5>
-                            <span class="difficulty-badge beginner">Beginner</span>
+                            <span class="difficulty-badge d-inline-block fw-bold beginner">Beginner</span>
                         </div>
                         <p class="topic-desc">Understand atoms, electrons, ions, and chemical bonding principles</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>9 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>4.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Chemistry Topic 2 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="chemistry">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Chemical Reactions & Equations</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Learn reaction types, balancing equations, and stoichiometry concepts</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>11 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>5.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Chemistry Topic 3 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="chemistry">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Periodic Table & Elements</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Explore element properties, groups, and periods with periodic trends</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>13 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Chemistry Topic 4 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="chemistry">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Organic Chemistry Intro</h5>
-                            <span class="difficulty-badge advanced">Advanced</span>
+                            <span class="difficulty-badge d-inline-block fw-bold advanced">Advanced</span>
                         </div>
                         <p class="topic-desc">Introduction to carbon compounds, functional groups, and reactions</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>15 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>7.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Physics Topic 1 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="physics">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Mechanics & Motion</h5>
-                            <span class="difficulty-badge beginner">Beginner</span>
+                            <span class="difficulty-badge d-inline-block fw-bold beginner">Beginner</span>
                         </div>
                         <p class="topic-desc">Learn forces, velocity, acceleration, and Newton's laws of motion</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>10 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Physics Topic 2 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="physics">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Thermodynamics & Heat</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Explore energy, temperature, heat transfer, and thermodynamic laws</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>12 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Physics Topic 3 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="physics">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Electromagnetism</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Understand electricity, magnetism, electromagnetic waves, and induction</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>13 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Physics Topic 4 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="physics">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Modern Physics</h5>
-                            <span class="difficulty-badge advanced">Advanced</span>
+                            <span class="difficulty-badge d-inline-block fw-bold advanced">Advanced</span>
                         </div>
                         <p class="topic-desc">Introduction to relativity, quantum mechanics, and atomic physics</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>14 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>7 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- CS Topic 1 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="cs">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Programming Fundamentals</h5>
-                            <span class="difficulty-badge beginner">Beginner</span>
+                            <span class="difficulty-badge d-inline-block fw-bold beginner">Beginner</span>
                         </div>
                         <p class="topic-desc">Learn basic programming concepts, variables, loops, and conditions</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>12 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- CS Topic 2 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="cs">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Data Structures & Algorithms</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Master arrays, linked lists, trees, and sorting & searching algorithms</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>15 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>7.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- CS Topic 3 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="cs">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Web Development Basics</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Build websites with HTML, CSS, JavaScript, and responsive design</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>14 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>7 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- CS Topic 4 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="cs">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Database & SQL</h5>
-                            <span class="difficulty-badge advanced">Advanced</span>
+                            <span class="difficulty-badge d-inline-block fw-bold advanced">Advanced</span>
                         </div>
                         <p class="topic-desc">Learn database design, SQL queries, and database management systems</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>13 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Biology Topic 1 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="biology">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Cell Biology & Genetics</h5>
-                            <span class="difficulty-badge beginner">Beginner</span>
+                            <span class="difficulty-badge d-inline-block fw-bold beginner">Beginner</span>
                         </div>
                         <p class="topic-desc">Study photosynthesis cell structure, functions, meosis, mitosis, and genetic inheritance</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>11 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>5.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Biology Topic 2 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="biology">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Human Anatomy & Physiology</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Explore human body systems, organs, and their physiological functions</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>13 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6.5 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Biology Topic 3 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="biology">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Ecology & Evolution</h5>
-                            <span class="difficulty-badge intermediate">Intermediate</span>
+                            <span class="difficulty-badge d-inline-block fw-bold intermediate">Intermediate</span>
                         </div>
                         <p class="topic-desc">Learn ecosystems, biodiversity, adaptation, and evolutionary principles</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>12 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>6 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
 
                 <!-- Biology Topic 4 -->
                 <div class="col-lg-4 col-md-6 topic-item" data-subject="biology">
-                    <div class="topic-card">
-                        <div class="topic-header">
+                    <div class="topic-card bg-white h-100">
+                        <div class="topic-header mb-3 d-flex justify-content-between align-items-start">
                             <h5 class="topic-title">Molecular Biology</h5>
-                            <span class="difficulty-badge advanced">Advanced</span>
+                            <span class="difficulty-badge d-inline-block fw-bold advanced">Advanced</span>
                         </div>
                         <p class="topic-desc">Understand DNA, proteins, molecular processes, and biotechnology</p>
-                        <div class="topic-meta">
+                        <div class="topic-meta d-flex gap-4">
                             <span><i class="fas fa-graduation-cap me-1"></i>14 Lessons</span>
                             <span><i class="fas fa-clock me-1"></i>7 Hours</span>
                         </div>
-                        <button class="start-btn">Start Learning</button>
+                        <button class="start-btn text-white border-0 fw-bold w-100">Start Learning</button>
                     </div>
                 </div>
             </div>
@@ -572,16 +457,16 @@
                     <h5><i class="fas fa-graduation-cap me-2"></i>EduHub</h5>
                     <p>Your comprehensive learning platform for academic excellence</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="topics.html">Topics</a></li>
                         <li><a href="resources.html">Resources</a></li>
                         <li><a href="quiz.html">Quiz</a></li>
@@ -620,25 +505,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function filterTopics(subject) {
-            const items = document.querySelectorAll('.topic-item');
-            const buttons = document.querySelectorAll('.filter-btn');
-
-            // Update buttons
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // Filter items
-            items.forEach(item => {
-                if (subject === 'all' || item.dataset.subject === subject) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <script src="../js/topics.js"></script>
 </body>
 
 </html>

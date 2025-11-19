@@ -7,156 +7,11 @@
     <title>Contact Us - EduHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .page-header {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 60px 0;
-        }
-
-        .page-header h1 {
-            font-weight: 800;
-        }
-
-        .contact-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            height: 100%;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-card h5 {
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .contact-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .contact-form {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .form-label {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .form-control,
-        .form-select {
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 0.8rem 1rem;
-            transition: all 0.3s;
-        }
-
-        .form-control:focus,
-        .form-select:focus {
-            border-color: var(--primary-gradient);
-            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
-        }
-
-        .form-text {
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        .submit-btn {
-            background: var(--primary-gradient);
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 20px;
-            font-weight: 700;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .submit-btn:hover {
-            transform: scale(1.02);
-        }
-
-        .faq-item {
-            background: white;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
-
-        .faq-header {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 1.2rem;
-            cursor: pointer;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .faq-body {
-            padding: 1.5rem;
-            display: none;
-        }
-
-        .faq-body.show {
-            display: block;
-        }
-
-        .faq-icon {
-            transition: transform 0.3s;
-        }
-
-        .faq-icon.show {
-            transform: rotate(45deg);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .social-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .social-btn:hover {
-            transform: translateY(-5px);
-        }
-    </style>
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/page-header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/pages/contact.css">
+    <link rel="stylesheet" href="../css/pages/style.css">
 </head>
 
 <body>
@@ -164,13 +19,13 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid px-4">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
                     <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
@@ -181,7 +36,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header text-center">
         <div class="container-fluid px-4">
             <h1>Get in Touch</h1>
             <p class="mb-0">We'd love to hear from you. Send us a message anytime</p>
@@ -191,33 +46,33 @@
     <!-- Contact Information -->
     <section style="padding: 80px 0;">
         <div class="container-fluid px-4">
-            <div class="row g-4 mb-5">
+            <div class="row g-4 mb-5 text-center">
                 <div class="col-lg-4 col-md-6">
-                    <div class="contact-card">
-                        <div class="contact-icon" style="color: #667eea;">
+                    <div class="contact-card bg-white">
+                        <div class="contact-icon mb-3" style="color: #667eea;">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <h5>Our Location</h5>
-                        <p>EduHub<br>Near SATA Tech<br>Gilgit</p>
+                        <h5 class="mb-3">Our Location</h5>
+                        <p class="m-0">EduHub<br>Near SATA Tech<br>Gilgit</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="contact-card">
-                        <div class="contact-icon" style="color: #4ecdc4;">
+                    <div class="contact-card bg-white">
+                        <div class="contact-icon mb-3" style="color: #4ecdc4;">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <h5>Phone Number</h5>
-                        <p><strong>Main:</strong> +92 3462225440<br><strong>Support:</strong> +92
+                        <h5 class="mb-3">Phone Number</h5>
+                        <p class="m-0"><strong>Main:</strong> +92 3462225440<br><strong>Support:</strong> +92
                             3478228882<br><strong>Mon-Fri</strong> 9AM-6PM</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="contact-card">
-                        <div class="contact-icon" style="color: #ff6b6b;">
+                    <div class="contact-card bg-white">
+                        <div class="contact-icon mb-3" style="color: #ff6b6b;">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <h5>Email Address</h5>
-                        <p><strong>General:</strong> info@eduhub.com<br><strong>Support:</strong>
+                        <h5 class="mb-3">Email Address</h5>
+                        <p class="m-0"><strong>General:</strong> info@eduhub.com<br><strong>Support:</strong>
                             support@eduhub.com<br><strong>Feedback:</strong> feedback@eduhub.com</p>
                     </div>
                 </div>
@@ -234,29 +89,29 @@
             </p>
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <div class="contact-form">
+                    <div class="contact-form bg-white">
                         <form id="contactForm">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Full Name</label>
+                                <label for="name" class="form-label mb-2 fw-bold">Full Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Enter your full name"
                                     required>
                                 <small class="form-text">We'll use this to personalize our response</small>
                             </div>
 
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
+                                <label for="email" class="form-label mb-2 fw-bold">Email Address</label>
                                 <input type="email" class="form-control" id="email"
                                     placeholder="Enter your email address" required>
                                 <small class="form-text">We'll never share your email</small>
                             </div>
 
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                <label for="phone" class="form-label mb-2 fw-bold">Phone Number (Optional)</label>
                                 <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
                             </div>
 
                             <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
+                                <label for="subject" class="form-label mb-2 fw-bold">Subject</label>
                                 <select class="form-select" id="subject" required>
                                     <option value="">Select a subject</option>
                                     <option value="general">General Inquiry</option>
@@ -267,7 +122,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
+                                <label for="message" class="form-label mb-2 fw-bold">Message</label>
                                 <textarea class="form-control" id="message" rows="5" placeholder="Enter your message..."
                                     required></textarea>
                                 <small class="form-text">Please provide as much detail as possible</small>
@@ -275,12 +130,12 @@
 
                             <div class="form-check mb-3">
                                 <input class="form-check-input" type="checkbox" id="agree" required>
-                                <label class="form-check-label" for="agree">
+                                <label class="form-check-label mb-2 fw-bold" for="agree">
                                     I agree to the terms and conditions
                                 </label>
                             </div>
 
-                            <button type="submit" class="submit-btn">
+                            <button type="submit" class="submit-btn text-white border-0 fw-bold w-100 mt-3">
                                 <i class="fas fa-paper-plane me-2"></i>Send Message
                             </button>
                         </form>
@@ -304,55 +159,55 @@
                 Questions</h2>
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <div class="faq-item">
-                        <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-white mb-4 overflow-hidden">
+                        <div class="faq-header text-white fw-bold d-flex align-items-center justify-content-between text-white fw-bold d-flex align-items-center justify-content-between" onclick="toggleFaq(this)">
                             <span>How can I reset my password?</span>
                             <i class="fas fa-plus faq-icon"></i>
                         </div>
-                        <div class="faq-body">
+                        <div class="faq-body p-4">
                             Click "Forgot Password" on the login page, enter your email, and follow the instructions
                             sent to your email.
                         </div>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-white mb-4 overflow-hidden">
+                        <div class="faq-header text-white fw-bold d-flex align-items-center justify-content-between" onclick="toggleFaq(this)">
                             <span>How do I download resources?</span>
                             <i class="fas fa-plus faq-icon"></i>
                         </div>
-                        <div class="faq-body">
+                        <div class="faq-body p-4">
                             Navigate to Resources page, find the material, and click the Download button. It will save
                             to your device.
                         </div>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-white mb-4 overflow-hidden">
+                        <div class="faq-header text-white fw-bold d-flex align-items-center justify-content-between" onclick="toggleFaq(this)">
                             <span>Can I retake quizzes?</span>
                             <i class="fas fa-plus faq-icon"></i>
                         </div>
-                        <div class="faq-body">
+                        <div class="faq-body p-4">
                             Yes, you can retake any quiz unlimited times. Your best score will be recorded in your
                             profile.
                         </div>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-white mb-4 overflow-hidden">
+                        <div class="faq-header text-white fw-bold d-flex align-items-center justify-content-between" onclick="toggleFaq(this)">
                             <span>Is there a mobile app?</span>
                             <i class="fas fa-plus faq-icon"></i>
                         </div>
-                        <div class="faq-body">
+                        <div class="faq-body p-4">
                             EduHub is fully responsive on mobile browsers. Dedicated apps are coming soon!
                         </div>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-header" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-white mb-4 overflow-hidden">
+                        <div class="faq-header text-white fw-bold d-flex align-items-center justify-content-between" onclick="toggleFaq(this)">
                             <span>How do I report a bug?</span>
                             <i class="fas fa-plus faq-icon"></i>
                         </div>
-                        <div class="faq-body">
+                        <div class="faq-body p-4">
                             Use the contact form above and select "Technical Support". Describe the issue and we'll help
                             immediately.
                         </div>
@@ -368,14 +223,14 @@
             <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Follow Us on Social Media</h2>
             <p style="color: var(--text-light); margin-bottom: 2rem;">Stay updated with the latest news and
                 announcements</p>
-            <div class="social-links">
-                <div class="social-btn" style="background: #667eea; color: white;"><i class="fab fa-facebook-f"></i>
+            <div class="social-links d-flex justify-content-center gap-4 flex-wrap text-white">
+                <div class="social-btn d-flex justify-content-center align-items-center" style="background: #667eea;" onclick="window.location.href='https://www.facebook.com'"><i class="fab fa-facebook-f"></i>
                 </div>
-                <div class="social-btn" style="background: #4ecdc4; color: white;"><i class="fab fa-twitter"></i></div>
-                <div class="social-btn" style="background: #ff6b6b; color: white;"><i class="fab fa-instagram"></i>
+                <div class="social-btn d-flex justify-content-center align-items-center" style="background: #4ecdc4;" onclick="window.location.href='https://x.com/'"><i class="fab fa-twitter"></i></div>
+                <div class="social-btn d-flex justify-content-center align-items-center" style="background: #ff6b6b;" onclick="window.location.href='https://instagram.com/'"><i class="fab fa-instagram"></i>
                 </div>
-                <div class="social-btn" style="background: #ffa502; color: white;"><i class="fab fa-youtube"></i></div>
-                <div class="social-btn" style="background: #764ba2; color: white;"><i class="fab fa-linkedin-in"></i>
+                <div class="social-btn d-flex justify-content-center align-items-center" style="background: #ffa502;" onclick="window.location.href='https://www.youtube.com'"><i class="fab fa-youtube"></i></div>
+                <div class="social-btn d-flex justify-content-center align-items-center" style="background: #764ba2;" onclick="window.location.href='https://www.linkedin.com'"><i class="fab fa-linkedin-in"></i>
                 </div>
             </div>
         </div>
@@ -389,16 +244,16 @@
                     <h5><i class="fas fa-graduation-cap me-2"></i>EduHub</h5>
                     <p>Your comprehensive learning platform for academic excellence</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="topics.html">Topics</a></li>
                         <li><a href="resources.html">Resources</a></li>
                         <li><a href="quiz.html">Quiz</a></li>
@@ -437,23 +292,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            document.getElementById('successMessage').style.display = 'block';
-            this.reset();
-            setTimeout(() => {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 5000);
-        });
-
-        function toggleFaq(element) {
-            const body = element.nextElementSibling;
-            const icon = element.querySelector('.faq-icon');
-            body.classList.toggle('show');
-            icon.classList.toggle('show');
-        }
-    </script>
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>

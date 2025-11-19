@@ -7,101 +7,11 @@
     <title>Resources - EduHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .page-header {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 60px 0;
-        }
-
-        .page-header h1 {
-            font-weight: 800;
-        }
-
-        .resource-section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-        }
-
-        .resource-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            height: 100%;
-            transition: all 0.3s;
-        }
-
-        .resource-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .resource-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .resource-meta {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .resource-meta span {
-            background: var(--bg-light);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .btn-download {
-            background: var(--primary-gradient);
-            color: white;
-            border: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 700;
-            margin-top: 1rem;
-            width: 100%;
-        }
-
-        .btn-download:hover {
-            transform: scale(1.02);
-        }
-
-        .video-placeholder {
-            background: #000;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-duration {
-            position: absolute;
-            bottom: 1rem;
-            right: 1rem;
-            background: var(--accent-color);
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/page-header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/pages/resources.css">
+    <link rel="stylesheet" href="../css/pages/style.css">
 </head>
 
 <body>
@@ -109,13 +19,13 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid px-4">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
                     <li class="nav-item"><a class="nav-link active" href="resources.html">Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
@@ -126,7 +36,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header text-center">
         <div class="container-fluid px-4">
             <h1>Learning Resources</h1>
             <p class="mb-0">Everything you need to succeed in your studies</p>
@@ -136,54 +46,54 @@
     <!-- Study Notes -->
     <section class="resource-section" style="background: white;">
         <div class="container-fluid px-4">
-            <h2 class="section-title"><i class="fas fa-sticky-note me-2" style="color: #667eea;"></i>Study Notes</h2>
+            <h2 class="section-title mb-5"><i class="fas fa-sticky-note me-2" style="color: #667eea;"></i>Study Notes</h2>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <i class="fas fa-file-pdf resource-icon" style="color: #ff6b6b;"></i>
+                    <div class="resource-card bg-white h-100">
+                        <i class="fas fa-file-pdf resource-icon mb-3" style="color: #ff6b6b;"></i>
                         <h6 class="fw-bold">English Grammar Guide</h6>
                         <p class="text-muted small">Complete guide with examples</p>
-                        <div class="resource-meta">
+                        <div class="resource-meta d-flex gap-3 mt-3">
                             <span>2.5 MB</span>
                             <span>PDF</span>
                         </div>
-                        <button type="button" class="btn-download" onclick="window.location.href='assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
+                        <button type="button" class="btn-download text-white border-0 fw-bold mt-3 w-100" onclick="window.location.href='../assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <i class="fas fa-file-pdf resource-icon" style="color: #ff6b6b;"></i>
+                    <div class="resource-card bg-white h-100">
+                        <i class="fas fa-file-pdf resource-icon mb-3" style="color: #ff6b6b;"></i>
                         <h6 class="fw-bold">Mathematics Formulas</h6>
                         <p class="text-muted small">All essential formulas organized</p>
-                        <div class="resource-meta">
+                        <div class="resource-meta d-flex gap-3 mt-3">
                             <span>3.2 MB</span>
                             <span>PDF</span>
                         </div>
-                        <button class="btn-download" onclick="window.location.href='assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100" onclick="window.location.href='../assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <i class="fas fa-file-pdf resource-icon" style="color: #ff6b6b;"></i>
+                    <div class="resource-card bg-white h-100">
+                        <i class="fas fa-file-pdf resource-icon mb-3" style="color: #ff6b6b;"></i>
                         <h6 class="fw-bold">Chemistry Concepts</h6>
                         <p class="text-muted small">Detailed with diagrams</p>
-                        <div class="resource-meta">
+                        <div class="resource-meta d-flex gap-3 mt-3">
                             <span>4.1 MB</span>
                             <span>PDF</span>
                         </div>
-                        <button class="btn-download" onclick="window.location.href='assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100" onclick="window.location.href='../assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <i class="fas fa-file-pdf resource-icon" style="color: #ff6b6b;"></i>
+                    <div class="resource-card bg-white h-100">
+                        <i class="fas fa-file-pdf resource-icon mb-3" style="color: #ff6b6b;"></i>
                         <h6 class="fw-bold">Physics Problems</h6>
                         <p class="text-muted small">Step-by-step solutions</p>
-                        <div class="resource-meta">
+                        <div class="resource-meta d-flex gap-3 mt-3">
                             <span>3.8 MB</span>
                             <span>PDF</span>
                         </div>
-                        <button class="btn-download" onclick="window.location.href='assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100" onclick="window.location.href='../assets/file.pdf'"><i class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
             </div>
@@ -193,50 +103,50 @@
     <!-- Video Lectures -->
     <section class="resource-section">
         <div class="container-fluid px-4">
-            <h2 class="section-title"><i class="fas fa-video me-2" style="color: #667eea;"></i>Video Lectures</h2>
+            <h2 class="section-title mb-5"><i class="fas fa-video me-2" style="color: #667eea;"></i>Video Lectures</h2>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <div class="video-placeholder" style="height: 180px;">
+                    <div class="resource-card bg-white h-100">
+                        <div class="video-placeholder bg-dark text-white d-flex justify-content-center align-items-center position-relative overflow-hidden" style="height: 180px;">
                             <i class="fas fa-play fa-2x"></i>
                             <span class="video-duration">45 min</span>
                         </div>
                         <h6 class="fw-bold mt-3">Understanding Photosynthesis</h6>
                         <p class="text-muted small">Complete video lecture</p>
-                        <button class="btn-download"  onclick="window.location.href='https://www.youtube.com'"><i class="fas fa-play me-1"></i>Watch Now</button>
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100"  onclick="window.location.href='https://youtu.be/FImr5l6tVvc'"><i class="fas fa-play me-1"></i>Watch Now</button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <div class="video-placeholder" style="height: 180px;">
+                    <div class="resource-card bg-white h-100">
+                        <div class="video-placeholder bg-dark text-white d-flex justify-content-center align-items-center position-relative overflow-hidden" style="height: 180px;">
                             <i class="fas fa-play fa-2x"></i>
                             <span class="video-duration">38 min</span>
                         </div>
                         <h6 class="fw-bold mt-3">Quadratic Equations</h6>
                         <p class="text-muted small">Comprehensive guide</p>
-                        <button class="btn-download"  onclick="window.location.href='https://www.youtube.com'"><i class="fas fa-play me-1"></i>Watch Now</button>
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100"  onclick="window.location.href='https://youtu.be/IWigvJcCAJ0'"><i class="fas fa-play me-1"></i>Watch Now</button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <div class="video-placeholder" style="height: 180px;">
+                    <div class="resource-card bg-white h-100">
+                        <div class="video-placeholder bg-dark text-white d-flex justify-content-center align-items-center position-relative overflow-hidden" style="height: 180px;">
                             <i class="fas fa-play fa-2x"></i>
                             <span class="video-duration">52 min</span>
                         </div>
                         <h6 class="fw-bold mt-3">Newton's Laws</h6>
                         <p class="text-muted small">In-depth explanation</p>
-                        <button class="btn-download"  onclick="window.location.href='https://www.youtube.com'"><i class="fas fa-play me-1"></i>Watch Now</button>
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100"  onclick="window.location.href='https://youtu.be/-w6oW1ut4Dw'"><i class="fas fa-play me-1"></i>Watch Now</button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="resource-card">
-                        <div class="video-placeholder" style="height: 180px;">
+                    <div class="resource-card bg-white h-100">
+                        <div class="video-placeholder bg-dark text-white d-flex justify-content-center align-items-center position-relative overflow-hidden" style="height: 180px;">
                             <i class="fas fa-play fa-2x"></i>
                             <span class="video-duration">41 min</span>
                         </div>
                         <h6 class="fw-bold mt-3">JavaScript Basics</h6>
                         <p class="text-muted small">Learn from scratch</p>
-                        <button class="btn-download"  onclick="window.location.href='https://www.youtube.com'"><i class="fas fa-play me-1"></i>Watch Now</button>
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100"  onclick="window.location.href='https://youtu.be/xwKbtUP87Dk'"><i class="fas fa-play me-1"></i>Watch Now</button>
                     </div>
                 </div>
             </div>
@@ -246,11 +156,11 @@
     <!-- Practice Materials -->
     <section class="resource-section" style="background: white;">
         <div class="container-fluid px-4">
-            <h2 class="section-title"><i class="fas fa-pencil-alt me-2" style="color: #667eea;"></i>Practice Materials
+            <h2 class="section-title mb-5"><i class="fas fa-pencil-alt me-2" style="color: #667eea;"></i>Practice Materials
             </h2>
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="resource-card">
+                    <div class="resource-card bg-white h-100">
                         <div class="d-flex gap-3">
                             <div
                                 style="width: 80px; height: 80px; background: var(--primary-gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -259,18 +169,18 @@
                             <div>
                                 <h6 class="fw-bold">English Literature Worksheet</h6>
                                 <p class="text-muted small">50 questions on Shakespeare</p>
-                                <div class="resource-meta">
+                                <div class="resource-meta d-flex gap-3 mt-3">
                                     <span>50 Q</span>
                                     <span>2 Hrs</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn-download" style="margin-top: 1rem;" onclick="window.location.href='assets/file.pdf'"><i
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100" style="margin-top: 1rem;" onclick="window.location.href='../assets/file.pdf'"><i
                                 class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="resource-card">
+                    <div class="resource-card bg-white h-100">
                         <div class="d-flex gap-3">
                             <div
                                 style="width: 80px; height: 80px; background: #4ecdc4; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -279,18 +189,18 @@
                             <div>
                                 <h6 class="fw-bold">Mathematics Problem Set</h6>
                                 <p class="text-muted small">100 problems from basic to advanced</p>
-                                <div class="resource-meta">
+                                <div class="resource-meta d-flex gap-3 mt-3">
                                     <span>100 P</span>
                                     <span>4 Hrs</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn-download" style="margin-top: 1rem;" onclick="window.location.href='assets/file.pdf'"><i
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100" style="margin-top: 1rem;" onclick="window.location.href='../assets/file.pdf'"><i
                                 class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="resource-card">
+                    <div class="resource-card bg-white h-100">
                         <div class="d-flex gap-3">
                             <div
                                 style="width: 80px; height: 80px; background: #ff6b6b; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -299,18 +209,18 @@
                             <div>
                                 <h6 class="fw-bold">Chemistry Lab Exercises</h6>
                                 <p class="text-muted small">Virtual experiments & guides</p>
-                                <div class="resource-meta">
+                                <div class="resource-meta d-flex gap-3 mt-3">
                                     <span>25 Exp</span>
                                     <span>6 Hrs</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn-download" style="margin-top: 1rem;" onclick="window.location.href='assets/file.pdf'"><i
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100" style="margin-top: 1rem;" onclick="window.location.href='../assets/file.pdf'"><i
                                 class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="resource-card">
+                    <div class="resource-card bg-white h-100">
                         <div class="d-flex gap-3">
                             <div
                                 style="width: 80px; height: 80px; background: #ffa502; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -319,13 +229,13 @@
                             <div>
                                 <h6 class="fw-bold">Physics Numerical Solutions</h6>
                                 <p class="text-muted small">75 problems with solutions</p>
-                                <div class="resource-meta">
+                                <div class="resource-meta d-flex gap-3 mt-3">
                                     <span>75 P</span>
                                     <span>5 Hrs</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn-download" style="margin-top: 1rem;" onclick="window.location.href='assets/file.pdf'"><i
+                        <button class="btn-download text-white border-0 fw-bold mt-3 w-100" style="margin-top: 1rem;" onclick="window.location.href='../assets/file.pdf'"><i
                                 class="fas fa-download me-1"></i>Download</button>
                     </div>
                 </div>
@@ -341,16 +251,16 @@
                     <h5><i class="fas fa-graduation-cap me-2"></i>EduHub</h5>
                     <p>Your comprehensive learning platform for academic excellence</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="topics.html">Topics</a></li>
                         <li><a href="resources.html">Resources</a></li>
                         <li><a href="quiz.html">Quiz</a></li>

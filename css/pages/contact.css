@@ -1,0 +1,107 @@
+.contact-card {
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+}
+
+.contact-card h5 {
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.contact-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.contact-form {
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 0px 25px 4px rgba(0, 0, 0, 0.08);
+}
+
+.form-label {
+  color: var(--text-dark);
+}
+
+.form-control,
+.form-select {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-gradient);
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.submit-btn {
+  background: var(--primary-gradient);
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  transform: scale(1.02);
+}
+
+.faq-item {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.faq-header {
+  background: var(--primary-gradient);
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.faq-body {
+  display: none;
+}
+
+.faq-body.show {
+  display: block;
+}
+
+.faq-icon {
+  transition: transform 0.3s;
+}
+
+.faq-icon.show {
+  transform: rotate(45deg);
+}
+
+.social-links {
+  margin-top: 2rem;
+}
+
+.social-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  transform: translateY(-5px);
+}

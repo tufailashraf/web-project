@@ -7,143 +7,11 @@
     <title>Quiz - EduHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .page-header {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 60px 0;
-        }
-
-        .page-header h1 {
-            font-weight: 800;
-        }
-
-        .quiz-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            border-left: 5px solid var(--primary-gradient);
-            height: 100%;
-            transition: all 0.3s;
-        }
-
-        .quiz-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .quiz-header {
-            font-size: 1.3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-        }
-
-        .quiz-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .stat-box {
-            background: var(--bg-light);
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-dark);
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .difficulty-bar {
-            margin: 1rem 0;
-        }
-
-        .progress-bar {
-            height: 6px;
-            border-radius: 10px;
-        }
-
-        .quiz-info {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin: 1rem 0;
-        }
-
-        .start-quiz-btn {
-            background: var(--primary-gradient);
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 20px;
-            font-weight: 700;
-            width: 100%;
-            cursor: pointer;
-        }
-
-        .start-quiz-btn:hover {
-            transform: scale(1.02);
-        }
-
-        .leaderboard-section {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .leaderboard-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .leaderboard-table {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .leaderboard-table table {
-            margin: 0;
-        }
-
-        .leaderboard-table thead {
-            background: var(--primary-gradient);
-            color: white;
-        }
-
-        .leaderboard-table th {
-            font-weight: 800;
-            padding: 1.2rem;
-            border: none;
-        }
-
-        .leaderboard-table td {
-            padding: 1.2rem;
-            border-bottom: 1px solid #eee;
-            vertical-align: middle;
-        }
-
-        .leaderboard-table tbody tr:hover {
-            background: var(--bg-light);
-        }
-
-        .rank-badge {
-            font-size: 1.2rem;
-            margin-right: 0.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/page-header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/pages/quiz.css">
+    <link rel="stylesheet" href="../css/pages/style.css">
 </head>
 
 <body>
@@ -151,13 +19,13 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid px-4">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-graduation-cap me-2"></i>EduHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
                     <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                     <li class="nav-item"><a class="nav-link active" href="quiz.html">Quiz</a></li>
@@ -168,7 +36,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header text-center">
         <div class="container-fluid px-4">
             <h1>Interactive Quizzes</h1>
             <p class="mb-0">Test your knowledge and track your progress</p>
@@ -181,19 +49,19 @@
             <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 3rem; text-align: center;">Subject Quizzes</h2>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="quiz-card" style="border-left-color: #667eea;">
-                        <div class="quiz-header"><i class="fas fa-book me-2"></i>English Quiz</div>
-                        <div class="quiz-stats">
-                            <div class="stat-box">
+                    <div class="quiz-card bg-white h-100" style="border-left-color: #667eea;">
+                        <div class="quiz-header mb-4"><i class="fas fa-book me-2"></i>English Quiz</div>
+                        <div class="quiz-stats d-grid gap-3 mb-4">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">50</div>
                                 <div class="stat-label">Questions</div>
                             </div>
-                            <div class="stat-box">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">60</div>
                                 <div class="stat-label">Minutes</div>
                             </div>
                         </div>
-                        <div class="difficulty-bar">
+                        <div class="difficulty-bar mx-0 my-3">
                             <small class="d-block mb-2">Difficulty:</small>
                             <div class="progress">
                                 <div class="progress-bar"
@@ -202,56 +70,56 @@
                             </div>
                             <small class="text-muted">Easy</small>
                         </div>
-                        <div class="quiz-info">
+                        <div class="quiz-info mx-0 my-3">
                             <strong>Passing Score:</strong> 70%<br>
                             <strong>Attempts:</strong> Unlimited
                         </div>
-                        <button class="start-quiz-btn">Start Quiz</button>
+                        <button class="start-quiz-btn text-white border-0 fw-bold w-100">Start Quiz</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="quiz-card" style="border-left-color: #4ecdc4;">
-                        <div class="quiz-header"><i class="fas fa-calculator me-2"></i>Mathematics Quiz</div>
-                        <div class="quiz-stats">
-                            <div class="stat-box">
+                    <div class="quiz-card bg-white h-100" style="border-left-color: #4ecdc4;">
+                        <div class="quiz-header mb-4"><i class="fas fa-calculator me-2"></i>Mathematics Quiz</div>
+                        <div class="quiz-stats d-grid gap-3 mb-4">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">40</div>
                                 <div class="stat-label">Questions</div>
                             </div>
-                            <div class="stat-box">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">45</div>
                                 <div class="stat-label">Minutes</div>
                             </div>
                         </div>
-                        <div class="difficulty-bar">
+                        <div class="difficulty-bar mx-0 my-3">
                             <small class="d-block mb-2">Difficulty:</small>
                             <div class="progress">
                                 <div class="progress-bar" style="width: 75%; background: #ff6b6b;"></div>
                             </div>
                             <small class="text-muted">Hard</small>
                         </div>
-                        <div class="quiz-info">
+                        <div class="quiz-info mx-0 my-3">
                             <strong>Passing Score:</strong> 75%<br>
                             <strong>Attempts:</strong> Unlimited
                         </div>
-                        <button class="start-quiz-btn" style="background: #4ecdc4;">Start Quiz</button>
+                        <button class="start-quiz-btn text-white border-0 fw-bold w-100" style="background: #4ecdc4;">Start Quiz</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="quiz-card" style="border-left-color: #ff6b6b;">
-                        <div class="quiz-header"><i class="fas fa-flask me-2"></i>Chemistry Quiz</div>
-                        <div class="quiz-stats">
-                            <div class="stat-box">
+                    <div class="quiz-card bg-white h-100" style="border-left-color: #ff6b6b;">
+                        <div class="quiz-header mb-4"><i class="fas fa-flask me-2"></i>Chemistry Quiz</div>
+                        <div class="quiz-stats d-grid gap-3 mb-4">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">45</div>
                                 <div class="stat-label">Questions</div>
                             </div>
-                            <div class="stat-box">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">50</div>
                                 <div class="stat-label">Minutes</div>
                             </div>
                         </div>
-                        <div class="difficulty-bar">
+                        <div class="difficulty-bar mx-0 my-3">
                             <small class="d-block mb-2">Difficulty:</small>
                             <div class="progress">
                                 <div class="progress-bar"
@@ -260,56 +128,56 @@
                             </div>
                             <small class="text-muted">Medium</small>
                         </div>
-                        <div class="quiz-info">
+                        <div class="quiz-info mx-0 my-3">
                             <strong>Passing Score:</strong> 70%<br>
                             <strong>Attempts:</strong> Unlimited
                         </div>
-                        <button class="start-quiz-btn" style="background: #ff6b6b;">Start Quiz</button>
+                        <button class="start-quiz-btn text-white border-0 fw-bold w-100" style="background: #ff6b6b;">Start Quiz</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="quiz-card" style="border-left-color: #ffa502;">
-                        <div class="quiz-header"><i class="fas fa-atom me-2"></i>Physics Quiz</div>
-                        <div class="quiz-stats">
-                            <div class="stat-box">
+                    <div class="quiz-card bg-white h-100" style="border-left-color: #ffa502;">
+                        <div class="quiz-header mb-4"><i class="fas fa-atom me-2"></i>Physics Quiz</div>
+                        <div class="quiz-stats d-grid gap-3 mb-4">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">48</div>
                                 <div class="stat-label">Questions</div>
                             </div>
-                            <div class="stat-box">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">55</div>
                                 <div class="stat-label">Minutes</div>
                             </div>
                         </div>
-                        <div class="difficulty-bar">
+                        <div class="difficulty-bar mx-0 my-3">
                             <small class="d-block mb-2">Difficulty:</small>
                             <div class="progress">
                                 <div class="progress-bar" style="width: 80%; background: #ff6b6b;"></div>
                             </div>
                             <small class="text-muted">Hard</small>
                         </div>
-                        <div class="quiz-info">
+                        <div class="quiz-info mx-0 my-3">
                             <strong>Passing Score:</strong> 75%<br>
                             <strong>Attempts:</strong> Unlimited
                         </div>
-                        <button class="start-quiz-btn" style="background: #ffa502;">Start Quiz</button>
+                        <button class="start-quiz-btn text-white border-0 fw-bold w-100" style="background: #ffa502;">Start Quiz</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="quiz-card" style="border-left-color: #764ba2;">
-                        <div class="quiz-header"><i class="fas fa-laptop-code me-2"></i>Computer Science Quiz</div>
-                        <div class="quiz-stats">
-                            <div class="stat-box">
+                    <div class="quiz-card bg-white h-100" style="border-left-color: #764ba2;">
+                        <div class="quiz-header mb-4"><i class="fas fa-laptop-code me-2"></i>Computer Science Quiz</div>
+                        <div class="quiz-stats d-grid gap-3 mb-4">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">52</div>
                                 <div class="stat-label">Questions</div>
                             </div>
-                            <div class="stat-box">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">60</div>
                                 <div class="stat-label">Minutes</div>
                             </div>
                         </div>
-                        <div class="difficulty-bar">
+                        <div class="difficulty-bar mx-0 my-3">
                             <small class="d-block mb-2">Difficulty:</small>
                             <div class="progress">
                                 <div class="progress-bar"
@@ -318,39 +186,39 @@
                             </div>
                             <small class="text-muted">Medium</small>
                         </div>
-                        <div class="quiz-info">
+                        <div class="quiz-info mx-0 my-3">
                             <strong>Passing Score:</strong> 72%<br>
                             <strong>Attempts:</strong> Unlimited
                         </div>
-                        <button class="start-quiz-btn" style="background: #764ba2;">Start Quiz</button>
+                        <button class="start-quiz-btn text-white border-0 fw-bold w-100" style="background: #764ba2;">Start Quiz</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="quiz-card" style="border-left-color: #00c896;">
-                        <div class="quiz-header"><i class="fas fa-dna me-2"></i>Biology Quiz</div>
-                        <div class="quiz-stats">
-                            <div class="stat-box">
+                    <div class="quiz-card bg-white h-100" style="border-left-color: #00c896;">
+                        <div class="quiz-header mb-4"><i class="fas fa-dna me-2"></i>Biology Quiz</div>
+                        <div class="quiz-stats d-grid gap-3 mb-4">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">46</div>
                                 <div class="stat-label">Questions</div>
                             </div>
-                            <div class="stat-box">
+                            <div class="stat-box p-3 text-center">
                                 <div class="stat-number">50</div>
                                 <div class="stat-label">Minutes</div>
                             </div>
                         </div>
-                        <div class="difficulty-bar">
+                        <div class="difficulty-bar mx-0 my-3">
                             <small class="d-block mb-2">Difficulty:</small>
                             <div class="progress">
                                 <div class="progress-bar" style="width: 55%; background: #00c896;"></div>
                             </div>
                             <small class="text-muted">Easy</small>
                         </div>
-                        <div class="quiz-info">
+                        <div class="quiz-info mx-0 my-3">
                             <strong>Passing Score:</strong> 68%<br>
                             <strong>Attempts:</strong> Unlimited
                         </div>
-                        <button class="start-quiz-btn" style="background: #00c896;">Start Quiz</button>
+                        <button class="start-quiz-btn text-white border-0 fw-bold w-100" style="background: #00c896;">Start Quiz</button>
                     </div>
                 </div>
             </div>
@@ -358,13 +226,13 @@
     </section>
 
     <!-- Leaderboard -->
-    <section class="leaderboard-section">
+    <section class="leaderboard-section bg-white">
         <div class="container-fluid px-4">
-            <h2 class="leaderboard-title"><i class="fas fa-trophy me-2" style="color: #ffa502;"></i>Top Performers</h2>
+            <h2 class="leaderboard-title text-center"><i class="fas fa-trophy me-2" style="color: #ffa502;"></i>Top Performers</h2>
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                    <div class="leaderboard-table">
-                        <table class="table">
+                    <div class="leaderboard-table bg-white overflow-hidden">
+                        <table class="table m-0">
                             <thead>
                                 <tr>
                                     <th>Rank</th>
@@ -426,16 +294,16 @@
                     <h5><i class="fas fa-graduation-cap me-2"></i>EduHub</h5>
                     <p>Your comprehensive learning platform for academic excellence</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li><a href="topics.html">Topics</a></li>
                         <li><a href="resources.html">Resources</a></li>
                         <li><a href="quiz.html">Quiz</a></li>

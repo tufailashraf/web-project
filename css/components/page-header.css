@@ -1,0 +1,9 @@
+.page-header {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 60px 0;
+}
+
+.page-header h1 {
+  font-weight: 800;
+}

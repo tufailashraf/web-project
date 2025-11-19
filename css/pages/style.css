@@ -1,0 +1,18 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --accent-color: #ff6b6b;
+  --secondary-accent: #4ecdc4;
+  --bg-light: #f8f9fa;
+  --text-dark: #1a1a2e;
+  --text-light: #6c757d;
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-light);
+}
