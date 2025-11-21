@@ -239,7 +239,7 @@ Below is the roadmap that will make the platform smarter, more engaging, and mor
 
 ## 👥 Contributors / Developers
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <a href="https://github.com/tufailashraf">
@@ -279,7 +279,9 @@ Below is the roadmap that will make the platform smarter, more engaging, and mor
   </tr>
 </table>
 
-All five worked as **full contributors and developers** toward building the platform.
+<div align="center">
+  All five worked as <b>full contributors and developers</b> toward building the platform.
+</div>
 
 ---
 
