@@ -102,11 +102,8 @@ Explore EDU-HUB through its key pages — each designed for clarity, interactivi
 
 ```
 web-project
+│
 │── index.html
-│── resources.html
-│── topics.html
-│── quiz.html
-│── contact.html
 │
 ├── css
 │   ├── components
@@ -118,8 +115,15 @@ web-project
 │        ├── contact.css
 │        ├── index.css
 │        ├── quiz.css
+│        ├── style.css
 │        ├── resources.css
 │        └── topics.css
+│
+├── pages
+│    ├── resources.html
+│    ├── topics.html
+│    ├── quiz.html
+│    └── contact.html
 │
 └── README.md
 ```
