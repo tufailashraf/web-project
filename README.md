@@ -105,6 +105,9 @@ web-project
 │
 │── index.html
 │
+├── assets
+│    └── file.pdf
+│
 ├── css
 │   ├── components
 │   │    ├── footer.css
